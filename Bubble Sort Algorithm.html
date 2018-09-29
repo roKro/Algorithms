@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	<!--Título-->
+	<h1> 
+	<center>
+	BUBBLE SORTING ALGORITHM
+	</center>
+	</h1>
+
+	<script>
+	<!--Algorítmo-->
+	function bubblesort() {
+		<!--Entrada-->
+		number = prompt("Please write a series of numbers separated with a ','","1,2,3")
+		var n = number.split(",");
+		<!--Lista introduzida-->
+		document.write("<p>")
+		document.write("<h2>");
+		document.write("<center>");
+		document.write(n);
+		document.write("</center>");
+		document.write("</h2>");
+		document.write("</p>")
+		<!--Variáveis-->
+		var l = n.length;
+		var a;
+		var b;
+		<!--Loops-->
+		for (j= 0; j < l-1; j++) {
+			for (i=0; i <= l; i++) {
+				a = n[i];
+				b = n[i+1];
+			
+				if (a>b) {
+					n[i] = b;
+					n[i+1] = a;
+				}
+			}
+		}
+		<!--Saida-->
+		document.write("<p>")
+		document.write(n)
+		document.write("</p>")
+	}
+</script>
+</head>
+
+<body>
+
+<style>
+
+.button {
+    background-color: #1ab2ff;
+    border: none;
+    color: black;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: blue;
+}
+</style>
+
+<center><button class="button" onclick="bubblesort()"><b>Bubble sort</b></button></center>
+</body>
+</html> 
